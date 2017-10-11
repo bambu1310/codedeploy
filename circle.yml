@@ -1,0 +1,13 @@
+deployment:
+  staging:
+    branch: master
+    codedeploy:
+      appname-1234:
+        application_root: /
+        region: us-east-1
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: codedeploy-cnx
+            key_pattern: codedeploy-master-624eb971d702b9e1ab80a1d450310ea0ab378e97
+        deployment_group: cnx_deploy
